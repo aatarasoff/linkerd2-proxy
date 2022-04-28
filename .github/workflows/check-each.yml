@@ -32,7 +32,7 @@ jobs:
       - run: apt update && apt install -y jq
       - uses: actions/checkout@a12a3943b4bdde767164f792f33f40b04645d846
       - run: cargo fetch
-      - uses: tj-actions/changed-files@e35d0afdc1f0b01f84ec0f4cdf1b179325634b36
+      - uses: tj-actions/changed-files@a6d456f542692915c5289ea834fb89bc07c11208
         id: changed-files
         with:
           files: |
