@@ -28,7 +28,7 @@ jobs:
     timeout-minutes: 3
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+      - uses: actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247
       - uses: tj-actions/changed-files@487675b843e203b5c9a92a07f1ed763d046d7283
         id: changed-files
         with:
@@ -54,7 +54,7 @@ jobs:
       matrix:
         crate: ${{ fromJson(needs.list-changed-crates.outputs.crates) }}
     steps:
-      - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+      - uses: actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247
       - run: just fetch
       - run: just check-crate ${{ matrix.crate }}
 
